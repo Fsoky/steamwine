@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class FriendsList:
 
 	objects: dict
-	friends_list = []
+	friends = []
 
 
 @dataclass

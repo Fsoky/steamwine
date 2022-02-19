@@ -1,3 +1,5 @@
+from typing import Union, List
+
 import json
 import asyncio
 import aiohttp
@@ -31,15 +33,17 @@ class User:
 							obj["relationship"],
 							obj["friend_since"]
 						)
-						friends_list.friends_list.append(friends_object)
+						friends_list.friends.append(friends_object)
 
 					return friends_list
 				else:
 					return response.text
 
-	async def get(self, steam_ids: int):
+	async def get(self, steam_ids: Union[List[str], int]):
 		"""In Development"""
 
+		if not isinstance(steam_ids, list):
+			steam_ids = [steam_ids]
 		self.default_params["steamids"] = steam_ids
 
 		async with aiohttp.ClientSession() as session:
