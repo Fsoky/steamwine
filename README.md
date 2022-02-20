@@ -12,7 +12,7 @@ api = Steam("API_KEY")
 async def handler():
 	friends = await api.user.friends(76561198982570889)
 
-	for friend in friends.friends_list:
+	for friend in friends.friends:
 		usr = await api.user.get(friend.steam_id)
 		print(usr.players[0].name)
 
