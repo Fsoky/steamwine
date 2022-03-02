@@ -44,7 +44,6 @@ class UserResponseData:
 	avatar: Avatar
 	last_logoff: int
 	personastate: int
-	realname: str = None
 	primary_clan_id: str = None
 	time_created: str = None
 	persona_state_flags: int = None
