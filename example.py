@@ -1,7 +1,7 @@
 import asyncio
 from steamwine import Steam
 
-api = Steam("B073992A27871F131E82FFE17CA788E5")
+api = Steam("API_KEY")
 
 
 async def handler():
