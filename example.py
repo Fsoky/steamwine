@@ -1,7 +1,7 @@
 import asyncio
 from steamwine import Steam
 
-api = Steam("API_KEY")
+api = Steam("B073992A27871F131E82FFE17CA788E5")
 
 
 async def handler():
@@ -9,7 +9,7 @@ async def handler():
 
     for friend in friends.friends:
         usr = await api.users.get(friend.steam_id)
-        print(usr.players[0].name)
+        print(usr.objects)
 
 
 asyncio.get_event_loop().run_until_complete(handler())
